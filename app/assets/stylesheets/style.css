@@ -63,6 +63,16 @@
 	height: 100vh;
 }
 
+.bottom {
+  margin-top: 7.8em;
+  background-color: #4381C7;
+}
+
+.footer-link {
+  text-decoration: none;
+  cursor: default;
+}
+
 .login-image {
   background: rgb(89,190,219);
 	background: linear-gradient(180deg, rgba(89,190,219,1) 0%, rgba(57,100,190,1) 49%, rgba(4,57,74,1) 100%);
