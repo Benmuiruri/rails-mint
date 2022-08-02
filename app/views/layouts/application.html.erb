@@ -14,6 +14,9 @@
 
   <body>
     <div class="full-height">
+    <% if user_signed_in? %>
+      <%= render partial: "shared/hamburger_navbar" %>
+    <% end %>
       <%= render partial: "shared/flash" %>
       <%= yield %>
   </div>

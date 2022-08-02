@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :authenticate_user!
   def index
+    render '/splash/welcome' unless user_signed_in?
   end
 end
