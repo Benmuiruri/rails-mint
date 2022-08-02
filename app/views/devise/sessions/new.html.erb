@@ -1,0 +1,40 @@
+<section class="text-center d-flex flex-column">
+<div class="p-5 login-image">
+  </div>
+
+   <div class="card login-card">
+      <div class="card-body py-5 px-md-5">
+        <div class="row d-flex justify-content-center">
+        <h2 class="fw-bold mb-5">Login</h2>
+          <div class="col-lg-8 d-flex justify-content-center">
+            
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+            <div class="form-outline mb-4">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control text-center", placeholder: "Email" %>
+            </div>
+
+            <div class="form-outline mb-4">
+              <%= f.password_field :password, autocomplete: "current-password", class: "form-control text-center", placeholder: "Password" %>
+            </div>
+
+            
+
+             <% if devise_mapping.rememberable? %>
+              <div class="form-check d-flex justify-content-center mb-4">
+                <%= f.check_box :remember_me, class: "form-check-input me-2" %>
+                <%= f.label :remember_me, class: "form-check-label" %>
+              </div>
+            <% end %>
+
+            <div class="mb-3">
+              <%= f.submit "Log in", class: "btn btn-primary btn-block mb-4" %>
+            </div>
+          <% end %>
+          </div>
+          <%= render "devise/shared/links" %>
+          <%= render "/shared/signed_out_links" %>
+        </div>
+      </div>
+    </div>
+</section>
+<%= render "/shared/signed_out_footer" %>
