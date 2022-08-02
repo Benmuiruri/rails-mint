@@ -4,5 +4,5 @@ class Group < ApplicationRecord
   has_many :expenses, through: :group_expenses
 
   validates :name, presence: true, length: { in: 3..10 }
-  validates :icon, presence: true,
+  validates :icon, presence: true
 end
