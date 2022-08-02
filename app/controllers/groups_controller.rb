@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  
+
   def index
     if user_signed_in?
       @groups = Group.includes(:expenses).where(user: current_user)
