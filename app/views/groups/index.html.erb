@@ -14,8 +14,8 @@
             <img src="<%= group.icon %>" class="rounded mx-auto d-block" alt="<%= group.name %>">
             <div class="card-body text-center">
               <h5 class="card-title"><%= group.name %></h5>
-              <p class="card-text">Great job. You have tracked <%= group.total_expenses %> of <%= group.name %></p>
-              <a href="#" class="btn btn-info">Go somewhere</a>
+              <p class="card-text">Great job. You have tracked $<%= group.total_expenses %> of <%= group.name %></p>
+              <%= link_to "View", group_path(group), class: 'btn btn-info' %>
             </div>
           </div>
       </div>
@@ -27,5 +27,5 @@
   <% end %>
 </div>
 <div class="d-grid gap-2 col-3 mx-auto text-center">
-  <button class="btn btn-info" type="button">Add Category</button>
+  <%= link_to "Add Category", new_group_path, class: 'btn btn-info' %>
 </div>

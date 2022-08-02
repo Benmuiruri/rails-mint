@@ -10,7 +10,11 @@ class GroupsController < ApplicationController
     end
   end
 
+  def new
+    @group = Group.new
+  end
+
   def show
-    @group = Group.includes(:payments).find(params[:id])
+    @group = Group.includes(:expenses).find(params[:id])
   end
 end

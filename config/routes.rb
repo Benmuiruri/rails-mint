@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "groups#index"
-  resources :groups, only: [:index, :show]
+  resources :groups, only: [:index, :show, :new]
 end
