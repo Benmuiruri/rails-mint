@@ -57,21 +57,21 @@ Expense.create!(
 
 Expense.create!(
   author: User.first,
-  groups: [Group.second],
+  groups: [Group.third],
   name: '52 Week Challenge',
   amount: 50
 )
 
 Expense.create!(
   author: User.first,
-  groups: [Group.third],
+  groups: [Group.second],
   name: 'Birthday cale',
   amount: 35
 )
 
 Expense.create!(
   author: User.second,
-  groups: [Group.third],
+  groups: [Group.second],
   name: 'Pizza',
   amount: 15
 )
