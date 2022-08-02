@@ -1,7 +1,9 @@
 <div class="container text-center">
   <h2> Welcome to the Rails Mint Expense Tracker</h2>
-  <%= render "/shared/categories_carousel" %>
-  <div class="d-grid gap-2 d-md-block">
-    <button class="btn btn-info" type="button">Add Category</button>
-  </div>
+  <% if current_user.groups.count > 2 %>
+    <%= render "/shared/categories_carousel", locals: { groups: @groups } %>
+  <% end%>
+</div>
+<div class="d-grid gap-2 col-3 mx-auto text-center">
+  <button class="btn btn-info" type="button">Add Category</button>
 </div>

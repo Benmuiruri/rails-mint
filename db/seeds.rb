@@ -26,6 +26,12 @@ Group.create!(
 
 Group.create!(
   user: User.first,
+  name: 'Food',
+  icon: 'https://res.cloudinary.com/optprime/image/upload/v1659435132/stash-it/food_sjw1yb.png'
+)
+
+Group.create!(
+  user: User.first,
   name: 'Saving',
   icon: 'https://res.cloudinary.com/optprime/image/upload/v1659435132/stash-it/saving_c7mrn6.png'
 )
@@ -54,6 +60,13 @@ Expense.create!(
   groups: [Group.second],
   name: '52 Week Challenge',
   amount: 50
+)
+
+Expense.create!(
+  author: User.first,
+  groups: [Group.third],
+  name: 'Birthday cale',
+  amount: 35
 )
 
 Expense.create!(

@@ -1,5 +1,10 @@
 class GroupsController < ApplicationController
+
   def index
-    render '/splash/welcome' unless user_signed_in?
+    if user_signed_in?
+      @groups = Group.includes(:expenses).where(user: current_user)
+    else
+      render '/splash/welcome'
+    end
   end
 end
