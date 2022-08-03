@@ -1,0 +1,27 @@
+<%= render partial: "shared/back_button" %>
+<div class="container mt-4 d-flex flex-column align-items-center">
+  <% if @group.expenses.none? %>
+    <h1> You have not added any payments for the <%= @group.name %> Category</h1>
+  <% else %> 
+    <h1 class="text-center">These are the expenses of the <%= @group.name %> Category</h1>
+    <h2 class="my-4 py-4 text-center">Great job. You have tracked $<%= @group.total_expenses %> of <%= @group.name %></h2>
+
+    <% @group.expenses.order(created_at: :desc).each do |expense|%>
+      <div class="card mb-3 expense-card">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
+            <img src="<%= @group.icon %>" class="rounded mx-auto d-block" alt="...">
+          </div>
+          <div class="col-md-8 ">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <h5 class="card-title"><%= expense.name %></h5>
+              <p class="card-text">$<%= expense.amount %></p>
+            </div>
+            <p class="card-text pt-4"><small class="text-muted"><%= l expense.created_at, format: :long %></small></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to "Add a new Expense", new_expense_path(group_id: @group[:id]), class: 'btn btn-info' %>
+</div>

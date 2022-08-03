@@ -1,0 +1,32 @@
+<div class="container text-center mt-4">
+  <% if current_user.groups.count > 2 %>
+    <h2 class="my-4">Here are some of the expenses you are tracking</h2>
+    <%= render "/shared/categories_carousel" %>  
+  <% end%>
+</div>
+<div class="container" style="width: 50%;">
+  <% if current_user.groups.any? %>
+    <h3 class="my-4 text-center">You have tracked $<%= @total_expenses %> across <%= @categories %> categories</h3>
+    <div class="row row-cols-1 row-cols-md-3">
+      <% @groups.each do |group| %>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="<%= group.icon %>" class="rounded mx-auto d-block pt-2" alt="<%= group.name %>">
+            <div class="card-body text-center">
+              <h5 class="card-title"><%= group.name %></h5>
+              <p class="card-text">Great job. You have tracked $<%= group.total_expenses %> of <%= group.name %></p>
+              <p class="card-text mt-2"><small class="text-muted">Since <%= l group.created_at, format: :long %></small></p>
+              <%= link_to "View", group_path(group), class: 'btn btn-info' %>
+            </div>
+          </div>
+      </div>
+      <% end %>
+    </div>
+  <% else %>
+    <h2 class="my-4"> Welcome to the Rails Mint Expense Tracker</h2>
+    <p> You don't have any category. Please click on the button below to add a category and start tracking your expenses </p>
+  <% end %>
+</div>
+<div class="d-grid gap-2 col-3 mx-auto text-center">
+  <%= link_to "Add Category", new_group_path, class: 'btn btn-info' %>
+</div>

@@ -1,0 +1,26 @@
+<div class="text-center mt-4">
+  <%= link_to @back_group_path do %>
+    <i class="fa-solid fa-circle-left fa-2x"></i>
+  <% end %>
+</div>
+
+<div class="container" style="width: 40%;">
+   <h2 class="text-center pt-4">Add a new Expense</h2>
+   <%= form_with model: @expense, url: expenses_path, method: :post do |form| %>
+   <%= render "shared/form_errors", form: form %>
+   <div class="col-sm-10">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, :required => "required", placeholder: :name, autofocus: true, class: "form-control" %>
+    </div>
+    <div class="col-sm-10">
+      <%= form.label :amount, class: "form-label pt-2" %>
+      <%= form.number_field :amount, :required => "required", autofocus: true, min: 0, step: 0.01, class: "form-control" %>
+    </div>
+    <div class="col-sm-10 mt-4">
+      <%= form.select :group_id, @groups.collect { |group| [group.name, group.id] }, { :prompt => 'Select Category'}, class: "form-select", required: true %>
+    </div>
+    <div class="my-3">
+        <%= form.submit "Add Expense", class: "btn btn-info" %>
+    </div>
+   <% end %>
+</div>

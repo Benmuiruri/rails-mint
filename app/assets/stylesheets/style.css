@@ -1,0 +1,128 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.animated-background {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background:
+    #2980b9
+    url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png')
+    repeat 0 0;
+  -webkit-animation: 10s linear 0s normal none infinite animate;
+  -moz-animation: 10s linear 0s normal none infinite animate;
+  -ms-animation: 10s linear 0s normal none infinite animate;
+  -o-animation: 10s linear 0s normal none infinite animate;
+  animation: 10s linear 0s normal none infinite animate;
+}
+
+@-webkit-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-moz-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-ms-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@-o-keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 500px 0;
+  }
+}
+
+.full-height {
+  height: 100%;
+  margin-bottom: 2em;
+}
+
+.bottom {
+  background-color: #4381c7;
+}
+
+.footer-link {
+  text-decoration: none;
+  cursor: default;
+}
+
+.login-image {
+  background: rgb(89, 190, 219);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(89, 190, 219, 1) 0%,
+      rgba(57, 100, 190, 1) 49%,
+      rgba(4, 57, 74, 1) 100%
+    );
+  height: 300px;
+}
+
+.login-card {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: -100px;
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(30px);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #ccc;
+}
+
+@media screen and (min-width: 800px) {
+  .login-image {
+    height: 40vh;
+  }
+
+  .login-card {
+    max-width: 40%;
+  }
+
+  .category-form {
+    max-width: 35%;
+  }
+
+  .expense-card {
+    min-width: 540px;
+  }
+}

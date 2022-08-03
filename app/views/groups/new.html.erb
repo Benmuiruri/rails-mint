@@ -1,0 +1,17 @@
+<%= render partial: "shared/back_button" %>
+<div class="container category-form">
+  <h2 class="text-center pt-4">Add a new Category</h2>
+  <%= form_with model: @group, url: groups_path, method: :post do |form| %>
+    <%= render "shared/form_errors", form: form %>
+    <div class="col-sm-10">
+      <%= form.text_field :name, :required => "required", placeholder: :name, autofocus: true, class: "form-control" %>
+    </div>
+     <div class="col-sm-10">
+        <em>(Enter a url link in the icon field)</em>
+        <%= form.text_field :icon, :required => "required", placeholder: :icon, autofocus: true, class: "form-control" %>
+    </div>
+     <div class="my-3">
+        <%= form.submit "Add Category", class: "btn btn-info" %>
+    </div>
+  <% end %>
+</div>
