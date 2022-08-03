@@ -4,6 +4,10 @@ class ExpensesController < ApplicationController
   def new
     @expense = Expense.new
     @groups = current_user.groups
+    @group_id = params[:group_id]
+    @back_group_path  = {
+      target: group_path(@group_id)
+    }
   end
 
   def create
