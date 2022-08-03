@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# Ruby on Rails - Community Blog
+# Ruby on Rails - Rails Mint
 
 > This repo hosts the Rails Mint web-app that allows tracking spending. The app allows you to monitor your expenses per category and your total expenses.Once logged in you can add the list of Categories you wish to track and from there you can add expenses under your respectrive categories. Each category has a unique icon that allows you to visualize your expenses
 
