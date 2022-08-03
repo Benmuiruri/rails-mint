@@ -19,9 +19,9 @@ class ExpensesController < ApplicationController
     if @expense.save
       @group = Group.find(expense_params[:group_id])
       @expense.groups << @group
-      redirect_to group_path(@group), notice: 'New category added successfully'
+      redirect_to group_path(@group), notice: 'New expense added successfully'
     else
-      flash[:alert] = 'Something went wrong, category not created'
+      flash[:alert] = 'Something went wrong, expense not created'
       render :new, status: :unprocessable_entity
     end
   end
