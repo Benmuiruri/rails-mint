@@ -100,10 +100,11 @@ body {
 footer {
   position: absolute;
   bottom: 0;
+
   /* Set the fixed height of the footer here */
   height: 60px;
   width: 100%;
-  background-color: #CCC;
+  background-color: #ccc;
 }
 
 @media screen and (min-width: 800px) {
