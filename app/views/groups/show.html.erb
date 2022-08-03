@@ -23,5 +23,5 @@
       </div>
     <% end %>
   <% end %>
-  <%= link_to "Add a new Expense", new_expense_path, class: 'btn btn-info' %>
+  <%= link_to "Add a new Expense", new_expense_path(group_id: @group[:id]), class: 'btn btn-info' %>
 </div>

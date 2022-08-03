@@ -101,4 +101,8 @@
   .login-card {
     max-width: 40%;
   }
+
+  .category-form {
+    max-width: 35%;
+  }
 }
