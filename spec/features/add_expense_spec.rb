@@ -36,6 +36,7 @@ RSpec.feature 'Login Page' do
       select('Group 0', from: 'expense[group_id]')
       click_button 'Add Expense'
       expect(page).to have_content('You have tracked $220.0 of Group 0')
+      expect(page).to have_current_path(group_path(Group.last))
     end
   end
 end
