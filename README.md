@@ -5,7 +5,9 @@
 
 ## Preview
 
-<img src="./app/assets/images/recipearea.png">
+<img src="./app/assets/images/budget.png">
+
+<img src="./app/assets/images/listitems.png">
 
 ## Video Presentation 
 
@@ -13,7 +15,7 @@
 
 ## Live Link
 
-- Visit this [live link](url) to interact with the web app before cloning it.
+- Visit this [live link](https://rails-mint.herokuapp.com/) to interact with the web app before cloning it.
 
 
 ## Built With
