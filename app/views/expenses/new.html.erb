@@ -2,6 +2,7 @@
 <div class="container" style="width: 40%;">
    <h2 class="text-center pt-4">Add a new Expense</h2>
    <%= form_with model: @group, url: expenses_path, method: :post do |form| %>
+   <%= render "shared/form_errors", form: form %>
    <div class="col-sm-10">
       <%= form.label :name, class: "form-label" %>
       <%= form.text_field :name, :required => "required", placeholder: :name, autofocus: true, class: "form-control" %>
