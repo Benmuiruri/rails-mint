@@ -3,16 +3,18 @@ class ExpensesController < ApplicationController
 
   def new
     @expense = Expense.new
-    @categories = current_user.groups
-    @group_id = params[:group_id]
+    @groups = current_user.groups
   end
 
   def create
-    @expense = Expense.new(expense_params)
+    @groups = current_user.groups
+    params = expense_params
+    @expense = Expense.new(name: params[:name], amount: params[:amount])
     @expense.author = current_user
-    @group = Group.find(expense_params[:groups_ids])
+
     if @expense.save
-      @expense.groups.push(@group)
+      @group = Group.find(expense_params[:group_id])
+      @expense.groups << @group
       redirect_to group_path(@group), notice: 'New category added successfully'
     else
       flash[:alert] = 'Something went wrong, category not created'
@@ -23,6 +25,6 @@ class ExpensesController < ApplicationController
   private 
 
   def expense_params
-    params.require(:expense).permit(:name, :amount, :groups_ids)
+    params.require(:expense).permit(:name, :amount, :group_id)
   end
 end
