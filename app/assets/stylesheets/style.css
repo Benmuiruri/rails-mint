@@ -1,3 +1,7 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .animated-background {
   height: 100vh;
   margin: 0;
@@ -66,11 +70,11 @@
 }
 
 .full-height {
-  height: 100vh;
+  height: 100%;
+  margin-bottom: 2em;
 }
 
 .bottom {
-  margin-top: 7.8em;
   background-color: #4381c7;
 }
 
@@ -91,6 +95,16 @@
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: blur(30px);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  width: 100%;
+  background-color: #ccc;
 }
 
 @media screen and (min-width: 800px) {

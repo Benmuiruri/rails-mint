@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
 
   def new
     @expense = Expense.new
-    @groups = current_user.groups
+    @groups = current_user.groups.order(:name)
     @group_id = params[:group_id]
     @back_group_path = {
       target: group_path(@group_id)
