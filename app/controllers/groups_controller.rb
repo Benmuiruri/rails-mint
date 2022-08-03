@@ -11,11 +11,28 @@ class GroupsController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.includes(:expenses).find(params[:id])
+  end
+
   def new
     @group = Group.new
   end
 
-  def show
-    @group = Group.includes(:expenses).find(params[:id])
+  def create
+    @group = Group.new(group_params)
+    @group.user = current_user
+    if @group.save!
+      redirect_to root_path, notice: 'New category added successfully'
+    else
+      flash[:alert] = 'Something went wrong, category not created'
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:name, :icon)
   end
 end
