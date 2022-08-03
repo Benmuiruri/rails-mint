@@ -1,7 +1,7 @@
 <%= render partial: "shared/back_button" %>
 <div class="container" style="width: 40%;">
    <h2 class="text-center pt-4">Add a new Expense</h2>
-   <%= form_with model: @group, url: expenses_path, method: :post do |form| %>
+   <%= form_with model: @expense, url: expenses_path, method: :post do |form| %>
    <%= render "shared/form_errors", form: form %>
    <div class="col-sm-10">
       <%= form.label :name, class: "form-label" %>
@@ -11,6 +11,7 @@
       <%= form.label :amount, class: "form-label pt-2" %>
       <%= form.number_field :name, :required => "required", autofocus: true, min: 0, step: 0.01, class: "form-control" %>
     </div>
+    <%= form.collection_check_boxes :group_ids, @categories, :id, :name %>
     <div class="my-3">
         <%= form.submit "Add Expense", class: "btn btn-info" %>
     </div>

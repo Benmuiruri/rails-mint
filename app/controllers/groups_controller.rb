@@ -22,7 +22,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     @group.user = current_user
-    if @group.save!
+    if @group.save
       redirect_to root_path, notice: 'New category added successfully'
     else
       flash[:alert] = 'Something went wrong, category not created'
