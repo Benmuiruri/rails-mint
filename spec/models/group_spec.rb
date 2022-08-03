@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   let(:user) { User.create(name: 'Ben', email: 'ben@gmail.com', password: '123456') }
 
-  let(:group) { Group.create(user: user, name: 'Bills', icon: 'https://image.com') }
+  let(:group) { Group.create(user:, name: 'Bills', icon: 'https://image.com') }
 
   context 'Group validation' do
     it 'is valid with a user, name, and icon' do

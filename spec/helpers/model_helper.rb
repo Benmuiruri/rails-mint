@@ -10,7 +10,7 @@ def create_groups_for_user(user, count: 1)
     groups << Group.create!(
       user:,
       name: "Group #{i}",
-      icon: "https://image.com",
+      icon: 'https://image.com'
     )
   end
   groups

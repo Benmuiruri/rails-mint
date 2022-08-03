@@ -30,7 +30,7 @@ RSpec.feature 'Login Page' do
 
     scenario 'Add a expense in the Bills category' do
       visit group_path(Group.last)
-      click_link'Add a new Expense'
+      click_link 'Add a new Expense'
       fill_in 'Name', with: 'Rent'
       fill_in 'Amount', with: 220
       select('Group 0', from: 'expense[group_id]')
