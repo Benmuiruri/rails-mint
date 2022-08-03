@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.includes(:expenses).find(params[:id])
+    @group = Group.find(params[:id])
   end
 
   def new
