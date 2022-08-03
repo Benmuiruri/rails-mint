@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
     @expense = Expense.new
     @groups = current_user.groups
     @group_id = params[:group_id]
-    @back_group_path  = {
+    @back_group_path = {
       target: group_path(@group_id)
     }
   end
@@ -26,7 +26,7 @@ class ExpensesController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def expense_params
     params.require(:expense).permit(:name, :amount, :group_id)
