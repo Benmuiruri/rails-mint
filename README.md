@@ -11,7 +11,7 @@
 
 ## Video Presentation 
 
-- Watch this video Presentation to get up to speed with how the app works. 
+- Watch this [video presentation](https://www.loom.com/share/2e7732eeea964d229f3d8b9c77061122) to get up to speed with how the app works. 
 
 ## Live Link
 
