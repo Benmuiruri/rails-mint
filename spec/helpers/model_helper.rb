@@ -1,3 +1,10 @@
+def login_as(name, password)
+  visit new_user_session_path
+  fill_in 'Email', with: name
+  fill_in 'Password', with: password
+  click_button 'Log in'
+end
+
 def create_and_activate_user(name)
   user = User.create!(name:, email: 'ben@gmail.com', password: 'password')
   user.save!
