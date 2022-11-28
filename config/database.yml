@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: rails_mint_production
-  username: rails_mint
-  password: <%= ENV["RAILS_MINT_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
