@@ -1,4 +1,3 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 # Ruby on Rails - Rails Mint
 
 > This repo hosts the Rails Mint web-app that allows tracking spending. The app allows you to monitor your expenses per category and your total expenses.Once logged in you can add the list of Categories you wish to track and from there you can add expenses under your respectrive categories. Each category has a unique icon that allows you to visualize your expenses
@@ -53,7 +52,7 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [Ben Kiarie](https://github.com/Benmuiruri) - Follow me on Github, browse my projects, and leave a star for any project you like.
 - Twitter: [Optimize](https://twitter.com/_optimize) - Follow me on Twitter I will make your Timeline a bit more interesting
-- LinkedIn: [Ben Kiarie](https://www.linkedin.com/in/benjamin-kiarie-180b66149/) - Connect with me on LinkedIn and help each other grow professionally
+- LinkedIn: [Ben Kiarie](https://www.linkedin.com/in/benjamin-kiarie-180b66149/) - Connect with me on LinkedIn lets expand our network for mutual benefits.
 
 ## 🤝 Contributing
 
